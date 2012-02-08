@@ -1,0 +1,22 @@
+Overview:
+  - use minimax algo to solve
+  - console based (print out, take input)
+  - test first whole thing
+  - choose who goes first (computer, human)
+  - start w/ breaking down to classes w/ responsbilities
+
+Things:
+  - board w/ grid of 9 spaces
+  - rules
+  - scorer
+  - computer player - minimax
+  - human player
+
+
+Classes
+  - IO
+    - Console - play on console
+  - Board - responsible for 9 cells that can be 'x' or 'o'
+  - Player
+    - Human
+    - Computer
