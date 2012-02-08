@@ -3,7 +3,7 @@ module Minimax
   Infinity = 1.0/0
 
   def Minimax.run board
-    @initial_turn = Rules.turn board
+    @initial_turn = Game.turn board
 
     result = Minimax.minimax board
     return result
@@ -11,11 +11,11 @@ module Minimax
 
   def Minimax.minimax board, depth = 1
     
-    if Scorer.over? board
-      return Minimax.something(board) * Minimax.analysis(board)
+    if Game.over? board
+      return Minimax.sign_toggle(board) * Minimax.analysis(board)
     end
     
-    player = Rules.turn board
+    player = Game.turn board
     max = -1 * Infinity
 
     choices = Hash.new
@@ -31,16 +31,16 @@ module Minimax
   end
 
   def Minimax.analysis board
-    if Scorer.tie? board
+    if Game.tie? board
       return 0
-    elsif Scorer.winner? board
+    elsif Game.winner? board
       # the returned value seems backward -- 
-      #return (@initial_turn == Scorer.winner(board)) ? -1 : 1
-      return (@initial_turn == Scorer.winner(board)) ? board.empty.count : -board.empty.count
+      #return (@initial_turn == Game.winner(board)) ? -1 : 1
+      return (@initial_turn == Game.winner(board)) ? board.empty.count : -board.empty.count
     end
   end
 
-  def Minimax.something board
-    (@initial_turn == Scorer.winner(board)) ? -1 : 1
+  def Minimax.sign_toggle board
+    (@initial_turn == Game.winner(board)) ? -1 : 1
   end
 end
