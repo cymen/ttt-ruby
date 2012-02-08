@@ -1,27 +1,16 @@
-class Scorer
-  def game_over? board
-    selector = Selector.new
-    over, winner = winning_row?(board, selector.all)
-    return true, winner if over
-
-    return true, :tie if tie?(board)
-
-    false
+module Scorer
+  def Scorer.tie? board
+    board.empty.count == 0
   end
 
-  def tie? board
-    return true if !board.spaces.has_value? nil
-  end
-
-  def winning_row? board, row_index_sets
-    row_index_sets.each do |row_index_set|
-      row = board.get(row_index_set)
-      return true, row.first if won?(row)
+  def Scorer.winner board
+    board.get_rows.each do |row|
+      return row.first if Scorer.same_and_not_nil? row
     end
-    false
+    nil
   end
 
-  def won? row
-    return (row.uniq.length == 1 and !row.first.nil?)
+  def Scorer.same_and_not_nil? row
+    return (!row.first.nil? and row.uniq.length == 1)
   end
 end
