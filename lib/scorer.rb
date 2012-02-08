@@ -1,6 +1,14 @@
 module Scorer
+  def Scorer.over? board
+    return (Scorer.winner? board or Scorer.tie? board)
+  end
+
   def Scorer.tie? board
     board.empty.count == 0
+  end
+
+  def Scorer.winner? board
+    !Scorer.winner(board).nil?
   end
 
   def Scorer.winner board

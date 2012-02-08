@@ -1,9 +1,7 @@
 class Board
-  :spaces
-
-  HORIZONTAL_ROWS = [[1,2,3], [4,5,6], [7,8,9]]
-  VERTICAL_ROWS =   [[1,4,7], [2,5,8], [3,6,9]]
-  DIAGONAL_ROWS =   [[1,5,9], [3,5,7]]
+  Horizontal_Rows = [[1,2,3], [4,5,6], [7,8,9]]
+  Vertical_Rows =   [[1,4,7], [2,5,8], [3,6,9]]
+  Diagonal_Rows =   [[1,5,9], [3,5,7]]
 
   def initialize values = []
     @spaces =  {}
@@ -11,11 +9,6 @@ class Board
       @spaces[space] = values[space-1]
     end
   end
-
-#  def space value = nil
-#    @spaces[space] = value if not value.nil?
-#    @spaces[space]
-#  end
 
   def set space, value
     @spaces[space] = value
@@ -35,7 +28,7 @@ class Board
 
   def get_rows
     rows = []
-    (HORIZONTAL_ROWS + VERTICAL_ROWS + DIAGONAL_ROWS).each do |spaces|
+    (Horizontal_Rows + Vertical_Rows + Diagonal_Rows).each do |spaces|
       rows.push get_row spaces
     end
     rows

@@ -1,5 +1,5 @@
-class Rules
-  def turn board
+module Rules
+  def Rules.turn board
     (board.count(:x) == board.count(:o)) ? :x : :o
   end
 end

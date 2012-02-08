@@ -1,11 +1,8 @@
 require 'rules'
 
 describe Rules do
-  before(:each) do
-    @rules = Rules.new
-  end
-
-  it "turn should return :x on an empty board" do
-    @rules.turn(Board.new).should eq(:x)
+  it "should determine the current turn based on the value of the board spaces" do
+    Rules.turn(Board.new).should eq(:x)
+    Rules.turn(Board.new [:x]).should eq(:o)
   end
 end
