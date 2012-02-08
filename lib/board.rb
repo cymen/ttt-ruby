@@ -1,7 +1,7 @@
 class Board
   Horizontal_Rows = [[1,2,3], [4,5,6], [7,8,9]]
-  Vertical_Rows =   [[1,4,7], [2,5,8], [3,6,9]]
-  Diagonal_Rows =   [[1,5,9], [3,5,7]]
+  Vertical_Rows   = [[1,4,7], [2,5,8], [3,6,9]]
+  Diagonal_Rows   = [[1,5,9], [3,5,7]]
 
   def initialize values = []
     @spaces =  {}
@@ -16,6 +16,10 @@ class Board
 
   def get space
     @spaces[space]
+  end
+
+  def clear space
+    set space, nil
   end
 
   def get_row spaces
@@ -40,5 +44,9 @@ class Board
 
   def empty
     (@spaces.select { |index, value| value.nil? }).keys
+  end
+
+  def to_s
+    @spaces.to_s
   end
 end

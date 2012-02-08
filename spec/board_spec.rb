@@ -22,6 +22,13 @@ describe Board do
     @board.empty.should eq([1, 2, 3, 4, 5, 6, 7, 8, 9])
   end
 
+  it "can set a space to a value and then clear it back to nil" do
+    @board.get(1).should eq(nil)
+    @board.set(1, :x).should eq(:x)
+    @board.clear(1)
+    @board.get(1).should eq(nil)
+  end
+
   it "shows only some spaces empty on a partially empty board" do
     @board = Board.new [nil, nil, nil, :x, :x, :x, :x, :x, :x]
     (1..3).each do |space|
