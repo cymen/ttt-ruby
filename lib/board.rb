@@ -47,6 +47,10 @@ class Board
   end
 
   def to_s
-    @spaces.to_s
+    output = ""
+    (Horizontal_Rows).each do |spaces|
+      output += get_row(spaces).to_s + "\n"
+    end
+    output
   end
 end

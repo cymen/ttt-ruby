@@ -8,13 +8,8 @@ module Minimax
     result = {}
 
     board.empty.each do |space|
-      @special = space == 1
       board.set space, Game.turn(board)
-      result[space] = Minimax.minimax board
-      if @special
-        puts "board: " + board.to_s + ", initial pick: " + space.to_s
-        puts "result: " + result.to_s
-      end
+      result[space] = -Minimax.minimax(board)
       board.clear space
     end
 
@@ -31,16 +26,12 @@ module Minimax
     max = -1 * Infinity
 
     z = {}
+    zc = {}
     board.empty.each do |space|
       board.set space, player
       value = -Minimax.minimax(board, depth + 1)
       max = [value, max].max
-      z[space] = value 
       board.clear space
-    end
-
-    if @special and depth == 1
-      puts "z: " + z.to_s
     end
 
     return max
@@ -51,6 +42,7 @@ module Minimax
       # the returned value seems backward --
       return (2 ** -depth) * ((@initial_turn == Game.winner(board)) ? 1 : -1)
       #return (@initial_turn == Game.winner(board)) ? board.empty.count : -board.empty.count
+      #return (@initial_turn == Game.winner(board)) ? -board.empty.count : board.empty.count
       #return ((@initial_turn == Game.winner(board)) ? -1 : 1) * 2 ** -depth
     elsif Game.tie? board
       return 0
@@ -59,6 +51,6 @@ module Minimax
   end
 
   def Minimax.sign_toggle board
-    (@initial_turn == Game.winner(board)) ? 1 : -1
+    (@initial_turn == Game.winner(board)) ? -1 : 1
   end
 end
