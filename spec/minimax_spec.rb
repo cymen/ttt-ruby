@@ -1,7 +1,7 @@
 require 'minimax'
 require 'rspec/expectations'
 
-RSpec::Matchers.define :have_optimal_space_of do |expected|
+RSpec::Matchers.define :have_optimal_move_of do |expected|
   match do |actual|
     (actual.max_by { |key, value| value }).first == expected
   end
@@ -13,15 +13,16 @@ end
 
 describe Minimax do
   it "picks a win over a block" do
-    (Minimax.run Board.new [:x,:x,:o,:x,:x,:o,:o,nil,nil]).should have_optimal_space_of 9
+    (Minimax.run Board.new [:x,:x,:o,:x,:x,:o,:o,nil,nil]).should have_optimal_move_of 9
   end
 
   it "picks immediate win" do
-    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,:o]).should have_optimal_space_of 2
+    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,:o]).should have_optimal_move_of 2
   end
 
   it "picks a block of opposing player" do
-    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,nil]).should have_optimal_space_of 2 
+    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,nil]).should have_optimal_move_of 2
+    (Minimax.run Board.new [:x,nil,:o,nil,nil,nil,:x,nil,nil]).should have_optimal_move_of 4
   end
 
 
