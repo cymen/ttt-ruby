@@ -10,6 +10,15 @@ RSpec::Matchers.define :have_optimal_move_of do |expected|
   end
 end
 
+RSpec::Matchers.define :have_optimal_moves_of do |expected|
+  match do |actual|
+    actual.reject { |key, value| value != actual.values.max }.keys.sort == expected.sort
+  end
+  failure_message_for_should do |actual|
+    "expected that #{actual.to_s} max value should keys equal #{expected}"
+  end
+end
+
 RSpec::Matchers.define :have_as_a_choice do |not_expected|
   match do |actual|
     actual.keys.count not_expected == 0
@@ -21,6 +30,10 @@ end
 
 
 describe Minimax do
+  it "picks a fork" do
+    (Minimax.run Board.new [:x,nil,:o]).should have_optimal_moves_of [7, 9]
+  end
+
   it "picks a win over a block" do
     (Minimax.run Board.new [:x,:x,:o,:x,:x,:o,:o,nil,nil]).should have_optimal_move_of 9
   end
