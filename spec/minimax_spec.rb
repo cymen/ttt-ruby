@@ -21,24 +21,22 @@ end
 
 
 describe Minimax do
-#  it "picks a win over a block" do
-#    (Minimax.run Board.new [:x,:x,:o,:x,:x,:o,:o,nil,nil]).should have_optimal_move_of 9
-#  end
-#
-#  it "picks immediate win" do
-#    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,:o]).should have_optimal_move_of 2
-#  end
-#
+  it "picks a win over a block" do
+    (Minimax.run Board.new [:x,:x,:o,:x,:x,:o,:o,nil,nil]).should have_optimal_move_of 9
+  end
+
+  it "picks immediate win" do
+    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,:o]).should have_optimal_move_of 2
+  end
+
   it "picks a block of opposing player" do
-    #puts "2: " + (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,nil]).to_s
     (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,nil]).should have_optimal_move_of 2
-    #puts "4: " + (Minimax.run Board.new [:x,nil,:o,nil,nil,nil,:x,nil,nil]).to_s
     (Minimax.run Board.new [:x,nil,:o,nil,nil,nil,:x,nil,nil]).should have_optimal_move_of 4
   end
-#
-#  it "picks a corner that both is a long term block and a long term possible win" do
-#    (Minimax.run Board.new [:x,nil,:o,:o,nil,nil,:x,nil,nil]).should have_optimal_move_of 9
-#  end
+
+  it "picks a corner that both is a long term block and a long term possible win" do
+    (Minimax.run Board.new [:x,nil,:o,:o,nil,nil,:x,nil,nil]).should have_optimal_move_of 9
+  end
 
 #  # long running test: all spaces are 0
 #  it "something should happen but not sure what" do

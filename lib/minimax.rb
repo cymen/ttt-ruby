@@ -48,8 +48,8 @@ module Minimax
 
   def Minimax.analysis board, depth
    if Game.winner? board
-      return (@initial_turn == Game.winner(board)) ? 1 : -1
-      #return (2 ** -depth) * ((@initial_turn == Game.winner(board)) ? 1 : -1)
+      #return (@initial_turn == Game.winner(board)) ? 1 : -1
+      return (2 ** -depth) * ((@initial_turn == Game.winner(board)) ? 1 : -1)
       #return (@initial_turn == Game.winner(board)) ? board.empty.count : -board.empty.count
       #return (@initial_turn == Game.winner(board)) ? -board.empty.count : board.empty.count
       #return ((@initial_turn == Game.winner(board)) ? -1 : 1) * 2 ** -depth
