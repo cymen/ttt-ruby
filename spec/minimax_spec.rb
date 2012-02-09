@@ -31,7 +31,7 @@ end
 
 describe Minimax do
   it "picks a fork" do
-    (Minimax.run Board.new [:x,nil,:o]).should have_optimal_moves_of [7, 9]
+    (Minimax.run Board.new [:x,nil,:o]).should have_optimal_moves_of [4, 7, 9]
   end
 
   it "picks a win over a block" do
