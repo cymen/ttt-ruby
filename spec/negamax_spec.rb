@@ -1,4 +1,4 @@
-require 'minimax'
+require 'negamax'
 require 'rspec/expectations'
 
 RSpec::Matchers.define :have_optimal_move_of do |expected|
@@ -29,31 +29,31 @@ RSpec::Matchers.define :have_as_a_choice do |not_expected|
 end
 
 
-describe Minimax do
+describe Negamax do
   it "picks a fork" do
-    (Minimax.run Board.new [:x,nil,:o]).should have_optimal_moves_of [4, 7, 9]
+    (Negamax.run Board.new [:x,nil,:o]).should have_optimal_moves_of [4, 7, 9]
   end
 
   it "picks a win over a block" do
-    (Minimax.run Board.new [:x,:x,:o,:x,:x,:o,:o]).should have_optimal_move_of 9
+    (Negamax.run Board.new [:x,:x,:o,:x,:x,:o,:o]).should have_optimal_move_of 9
   end
 
   it "picks immediate win" do
-    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,:o]).should have_optimal_move_of 2
+    (Negamax.run Board.new [:x,nil,:x,nil,nil,nil,:o,nil,:o]).should have_optimal_move_of 2
   end
 
   it "picks a block of opposing player" do
-    (Minimax.run Board.new [:x,nil,:x,nil,nil,nil,:o]).should have_optimal_move_of 2
-    (Minimax.run Board.new [:x,nil,:o,nil,nil,nil,:x]).should have_optimal_move_of 4
+    (Negamax.run Board.new [:x,nil,:x,nil,nil,nil,:o]).should have_optimal_move_of 2
+    (Negamax.run Board.new [:x,nil,:o,nil,nil,nil,:x]).should have_optimal_move_of 4
   end
 
   it "picks a corner that both is a long term block and a long term possible win" do
-    (Minimax.run Board.new [:x,nil,:o,:o,nil,nil,:x]).should have_optimal_move_of 9
+    (Negamax.run Board.new [:x,nil,:o,:o,nil,nil,:x]).should have_optimal_move_of 9
   end
 
   # long running test: all spaces are 0
 #  it "something should happen but not sure what" do
-#    result = Minimax.run Board.new
+#    result = Negamax.run Board.new
 #    puts "result: " + result.to_s
 #  end
 
