@@ -38,13 +38,7 @@ module Negamax
 
   def Negamax.analysis board, depth
    if Game.winner? board
-      #return 1
-      #return (@initial_player == Game.winner(board)) ? 1 : -1
       return 2 ** -depth
-      #return (2 ** -depth) * ((@initial_player == Game.winner(board)) ? 1 : -1)
-      #return (@initial_player == Game.winner(board)) ? board.empty.count : -board.empty.count
-      #return (@initial_player == Game.winner(board)) ? -board.empty.count : board.empty.count
-      #return ((@initial_player == Game.winner(board)) ? -1 : 1) * 2 ** -depth
     elsif Game.tie? board
       return 0
     end
