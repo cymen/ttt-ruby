@@ -56,5 +56,5 @@ describe Negamax do
 #    result = Negamax.run Board.new
 #    puts "result: " + result.to_s
 #  end
-
+#
 end

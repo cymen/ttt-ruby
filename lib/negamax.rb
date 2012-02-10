@@ -16,7 +16,7 @@ module Negamax
     return result
   end
 
-  def Negamax.negamax board, depth = 1
+  def Negamax.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
 
     if Game.over? board
       return Negamax.sign_toggle(board) * Negamax.analysis(board, depth)
@@ -25,13 +25,12 @@ module Negamax
     player = Game.turn board
     max = -Infinity
 
-    z = {}
     board.empty.each do |space|
       board.set space, player
-      value = -Negamax.negamax(board, depth + 1)
-      max = [value, max].max
+      max = [-Negamax.negamax(board, depth + 1, -beta, -alpha), max].max
       board.clear space
-      z[space] = max
+      alpha = [alpha, max].max
+      return alpha if alpha >= beta
     end
 
     return max
@@ -39,15 +38,16 @@ module Negamax
 
   def Negamax.analysis board, depth
    if Game.winner? board
+      #return 1
       #return (@initial_player == Game.winner(board)) ? 1 : -1
-      return (2 ** -depth) * ((@initial_player == Game.winner(board)) ? 1.01 : -1)
+      return 2 ** -depth
+      #return (2 ** -depth) * ((@initial_player == Game.winner(board)) ? 1 : -1)
       #return (@initial_player == Game.winner(board)) ? board.empty.count : -board.empty.count
       #return (@initial_player == Game.winner(board)) ? -board.empty.count : board.empty.count
       #return ((@initial_player == Game.winner(board)) ? -1 : 1) * 2 ** -depth
     elsif Game.tie? board
       return 0
     end
-   
   end
 
   def Negamax.sign_toggle board
