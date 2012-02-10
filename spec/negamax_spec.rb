@@ -43,6 +43,7 @@ describe Negamax do
   end
 
   it "picks a block of opposing player" do
+    (Negamax.run Board.new [:x,:nil,:o,nil,:x]).should have_optimal_move_of 9
     (Negamax.run Board.new [:x,nil,:x,nil,nil,nil,:o]).should have_optimal_move_of 2
     (Negamax.run Board.new [:x,nil,:o,nil,nil,nil,:x]).should have_optimal_move_of 4
   end
