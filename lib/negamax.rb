@@ -49,14 +49,4 @@ module Negamax
   def Negamax.initial_player_is_winner board
     @initial_player == Game.winner(board)
   end
-
-  def Negamax.opposite_player_of player
-    (player == :x) ? :o : :x
-  end
-
-  def Negamax.sort_by_optimal_space_first choices
-    best = [1, 3, 7, 9, 5]
-
-
-  end
 end
