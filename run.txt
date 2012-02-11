@@ -1,0 +1,2662 @@
+/home/cvig/.rvm/rubies/ruby-1.9.3-p0/bin/ruby -S rspec ./spec/game_spec.rb ./spec/negamax_spec.rb ./spec/board_spec.rb
+.....winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:x, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[nil, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :x]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :x]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, nil]
+[:x, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:x, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, nil]
+[:x, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, nil]
+[nil, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[nil, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, nil]
+[:o, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, nil]
+[nil, nil, :x]
+depth: 2, won by: x, returning: 1/4
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[nil, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[nil, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[nil, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[nil, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :x]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :x]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, nil]
+[:x, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, nil]
+[:x, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, nil]
+[nil, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[nil, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[nil, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, nil]
+[:o, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[nil, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, nil]
+[nil, nil, :x]
+depth: 2, won by: x, returning: 1/4
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[nil, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[nil, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[nil, nil, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:x, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[nil, nil, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:x, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[:x, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[:x, nil, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[nil, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[nil, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :o]
+[:x, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[nil, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[:o, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[nil, :x, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[nil, nil, :x]
+depth: 2, won by: x, returning: 1/4
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, nil]
+[:o, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, nil]
+[:o, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, nil]
+[:o, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, nil, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :x]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :x]
+[:o, nil, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :x]
+[:o, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, nil]
+[:o, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, nil]
+[:o, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:o, :x, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[:o, :x, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[:o, :x, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, nil]
+[:o, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, nil]
+[:o, nil, :x]
+depth: 2, won by: x, returning: 1/4
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, nil]
+[:o, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, nil]
+[:o, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[nil, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, nil]
+[:x, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :x]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :x]
+[nil, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :x]
+[:o, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[nil, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, nil]
+[:x, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, nil]
+[:x, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, :o, :x]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:x, :o, nil]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[:x, :o, :x]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, nil]
+[:x, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, nil]
+[nil, :o, :x]
+depth: 2, won by: x, returning: 1/4
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[nil, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[nil, nil, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, nil]
+[:o, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[nil, nil, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[:o, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, :o]
+[nil, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:x, :x, nil]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[nil, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, nil]
+[:x, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[nil, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[:o, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :x]
+[:o, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :x]
+[nil, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, nil]
+[:x, nil, :o]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :o]
+[:x, nil, :o]
+depth: 5, won by: o, returning: 1/32
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[:x, nil, :o]
+depth: 3, won by: o, returning: 1/8
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, :o]
+[:x, :o, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, nil]
+[:x, :o, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:x, :o, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:x, :o, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :o]
+[nil, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :o, :o]
+[nil, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, nil]
+[nil, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+tie for board:
+[:x, :o, :o]
+[:o, :x, :x]
+[:x, :x, :o]
+depth: 6, returning: 0
+
+winner for board:
+[:x, nil, :o]
+[:o, :x, :o]
+[:x, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, nil, :o]
+[nil, :x, :o]
+[nil, :x, :o]
+depth: 3, won by: o, returning: 1/8
+
+winner for board:
+[:x, :x, :o]
+[nil, :x, nil]
+[:o, :x, :o]
+depth: 4, won by: x, returning: 1/16
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, nil, :o]
+[:x, :x, :o]
+[:o, :x, :o]
+depth: 5, won by: o, returning: 1/32
+
+winner for board:
+[:x, :o, :o]
+[:x, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+winner for board:
+[:x, :x, :o]
+[:o, :x, :x]
+[:o, :x, :o]
+depth: 6, won by: x, returning: 1/64
+
+F........
+
+Failures:
+
+  1) Negamax picks a block of opposing player
+     Failure/Error: (Negamax.run Board.new [:x,nil,:o,nil,:x,nil,nil,nil,nil]).should have_optimal_move_of 9
+       expected that {2=>(1/64), 4=>(1/64), 6=>(1/8), 7=>(1/32), 8=>(1/32), 9=>(1/64)} max value should key equal to 9 and be only one w/ value!
+     # ./spec/negamax_spec.rb:50:in `block (2 levels) in <top (required)>'
+
+Finished in 0.10875 seconds
+14 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/negamax_spec.rb:49 # Negamax picks a block of opposing player

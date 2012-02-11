@@ -38,13 +38,17 @@ module Negamax
 
   def Negamax.analysis board, depth
    if Game.winner? board
-      return 2 ** -depth
+      return 2 ** -depth * ((initial_player_is_winner board) ? 1 : -1)
     elsif Game.tie? board
       return 0
     end
-  end
+  end  
 
   def Negamax.sign_toggle board
-    (@initial_player == Game.winner(board)) ? -1 : 1
+    (initial_player_is_winner board) ? -1 : 1
+  end
+
+  def Negamax.initial_player_is_winner board
+    @initial_player == Game.winner(board)
   end
 end
