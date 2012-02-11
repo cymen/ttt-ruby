@@ -4,6 +4,7 @@ module Negamax
 
   def Negamax.run board
     @initial_player = Game.turn board
+    @spaces_count = board.count
 
     result = {}
 
@@ -17,7 +18,7 @@ module Negamax
   end
 
   def Negamax.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
-    return alpha if depth > 8 
+    return alpha if depth > (@spaces_count - 1)
     return sign_toggle(board) * analysis(board, depth) if Game.over? board
 
     player = Game.turn board

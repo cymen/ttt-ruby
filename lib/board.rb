@@ -38,8 +38,8 @@ class Board
     rows
   end
 
-  def count value
-    @spaces.values.count(value)
+  def count value = nil
+    (value.nil?) ? @spaces.values.count : @spaces.values.count(value)
   end
 
   def empty
