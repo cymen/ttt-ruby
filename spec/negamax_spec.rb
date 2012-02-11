@@ -3,7 +3,7 @@ require 'rspec/expectations'
 
 RSpec::Matchers.define :have_optimal_move_of do |expected|
   match do |actual|
-    (actual.max_by { |key, value| value }).first == expected and actual.values.count(actual.values.max) == 1
+    (actual.max_by {|_, value| value }).first == expected and actual.values.count(actual.values.max) == 1
   end
   failure_message_for_should do |actual|
     "expected that #{actual.to_s} max value should key equal to #{expected} and be only one w/ value!"
@@ -12,24 +12,28 @@ end
 
 RSpec::Matchers.define :have_optimal_moves_of do |expected|
   match do |actual|
-    actual.reject { |key, value| value != actual.values.max }.keys.sort == expected.sort
+    max = actual.values.max
+    actual.select {|_, value| value == max }.keys.sort == expected.sort
   end
   failure_message_for_should do |actual|
     "expected that #{actual.to_s} max value should keys equal #{expected}"
   end
 end
 
-RSpec::Matchers.define :have_as_a_choice do |not_expected|
+RSpec::Matchers.define :not_have_choice_of do |unexpected|
   match do |actual|
-    actual.keys.count not_expected == 0
+    actual.keys.count unexpected == 0
   end
   failure_message_for_should do |actual|
-    "expected that #{actual.to_s} should not have key #{not_expected}"
+    "expected that #{actual} should not have a key of #{unexpected}"
   end
 end
 
-
 describe Negamax do
+  it "doesn't pick an obvious loose" do
+    (Negamax.run Board.new [:x,nil,nil,nil,:o]).should not_have_choice_of 9
+  end
+
   it "picks a fork" do
     (Negamax.run Board.new [:x,nil,:o]).should have_optimal_moves_of [4, 7, 9]
   end
@@ -55,10 +59,10 @@ describe Negamax do
     (Negamax.run Board.new [:x,nil,:o,:o,nil,nil,:x]).should have_optimal_move_of 9
   end
 
-  # long running test: all spaces are 0
-#  it "something should happen but not sure what" do
-#    result = Negamax.run Board.new
-#    puts "result: " + result.to_s
-#  end
+#  # long running test: all spaces are 0
+  it "something should happen but not sure what" do
+    result = Negamax.run Board.new
+    puts "result: " + result.to_s
+ end
 
 end

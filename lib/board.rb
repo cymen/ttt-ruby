@@ -48,8 +48,10 @@ class Board
 
   def to_s
     output = ""
-    (Horizontal_Rows).each do |spaces|
-      output += get_row(spaces).to_s + "\n"
+    (1..9).each do |index|
+      value = get index
+      output += (value.nil?) ? "_" : value.to_s
+      output += (index) % 3 == 0 ? "\n" : " "
     end
     output
   end

@@ -17,10 +17,8 @@ module Negamax
   end
 
   def Negamax.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
-
-    if Game.over? board
-      return sign_toggle(board) * analysis(board, depth)
-    end
+    return alpha if depth > 8 
+    return sign_toggle(board) * analysis(board, depth) if Game.over? board
 
     player = Game.turn board
     max = -Infinity
@@ -38,7 +36,7 @@ module Negamax
 
   def Negamax.analysis board, depth
    if Game.winner? board
-      return 2 ** -depth * ((initial_player_is_winner board) ? 1 : -1)
+      return (2 ** -depth) * ((initial_player_is_winner board) ? 1 : -1)
     elsif Game.tie? board
       return 0
     end
@@ -50,5 +48,15 @@ module Negamax
 
   def Negamax.initial_player_is_winner board
     @initial_player == Game.winner(board)
+  end
+
+  def Negamax.opposite_player_of player
+    (player == :x) ? :o : :x
+  end
+
+  def Negamax.sort_by_optimal_space_first choices
+    best = [1, 3, 7, 9, 5]
+
+
   end
 end
