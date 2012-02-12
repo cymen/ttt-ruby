@@ -67,6 +67,6 @@ module Game
   end
 
   def Game.same_or_nil? row
-    row.select { |value| !value.nil? }.uniq.count == 1
+    row.select { |value| !value.nil? }.uniq.count <= 1
   end
 end

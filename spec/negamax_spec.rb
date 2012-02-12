@@ -60,9 +60,9 @@ describe Negamax do
   end
 
 #  # long running test: all spaces are 0
-#  it "something should happen but not sure what" do
-#    result = Negamax.run Board.new
-#    puts "result: " + result.to_s
-# end
+  it "something should happen but not sure what" do
+    result = Negamax.run Board.new
+    puts "result: " + result.to_s
+ end
 
 end
