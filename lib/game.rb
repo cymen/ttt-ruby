@@ -16,7 +16,7 @@ module Game
         while !have_choice
           puts "Pick a space from #{board.empty.sort}: "
           choice = STDIN.gets.to_i
-          have_choice = true if board.empty.count choice == 1
+          have_choice = true if board.empty.count(choice) == 1
         end
         board.set choice, :o
       end
