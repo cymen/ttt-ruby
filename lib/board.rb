@@ -1,4 +1,6 @@
 class Board
+
+  SideLength = 3
   Horizontal_Rows = [[1,2,3], [4,5,6], [7,8,9]]
   Vertical_Rows   = [[1,4,7], [2,5,8], [3,6,9]]
   Diagonal_Rows   = [[1,5,9], [3,5,7]]
@@ -38,12 +40,20 @@ class Board
     rows
   end
 
+  def get_horizontal_row_index_sets
+    return Horizontal_Rows
+  end
+
   def count value = nil
     (value.nil?) ? @spaces.values.count : @spaces.values.count(value)
   end
 
   def empty
     (@spaces.select { |index, value| value.nil? }).keys
+  end
+
+  def side_length
+    SideLength
   end
 
   def to_s
