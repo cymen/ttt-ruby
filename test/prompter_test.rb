@@ -39,16 +39,20 @@ end
 # mocks
 class PrompterTest
   class MockWriter
-    attr_accessor :times_asked_for_int, :times_asked_for_int_in_list, :times_notified_not_an_int, :times_notified_not_in_list
+    attr_accessor :times_asked_for_int, :times_asked_for_int_in_list,
+        :times_notified_not_an_int, :times_notified_not_in_list
     def initialize
-      self.times_asked_for_int = self.times_notified_not_an_int = 0
+      self.times_asked_for_int = 0
+      self.times_asked_for_int_in_list = 0
+      self.times_notified_not_an_int = 0
+      self.times_notified_not_in_list = 0
     end
     
     def ask_for_int
       self.times_asked_for_int += 1
     end
 
-    def ask_for_int_in_list
+    def ask_for_int_in_list list
       self.times_asked_for_int_in_list += 1
     end
     

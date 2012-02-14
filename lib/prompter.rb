@@ -9,8 +9,8 @@ class Prompter
 
   def self.integer_in_list list, reader=Reader, writer=Writer
     writer.ask_for_int_in_list list
-    int = reader.read_in
-    return int if list.count(int) > 0
+    int = reader.read_int
+    return int if int and list.count(int) > 0
     writer.notify_not_in_list list
     self.integer_in_list list, reader, writer
   end
