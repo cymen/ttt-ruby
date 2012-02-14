@@ -17,10 +17,18 @@ class Prompter
 
   def self.x_or_o reader=Reader, writer=Writer
     writer.ask_x_or_o
-    choice = reader.read_string
-    return choice if ['X', 'O'].count(choice.upcase) > 0
+    choice = reader.read_string.upcase
+    return choice if ['X', 'O'].count(choice) > 0
     writer.notify_not_x_or_o
     self.x_or_o reader, writer
+  end
+
+  def self.play_again reader=Reader, writer=Writer
+    writer.ask_play_again
+    choice = reader.read_string.upcase
+    return choice if ['Y', 'N'].count(choice) > 0
+    writer.notify_not_y_or_n
+    self.play_again reader, writer
   end
 
   class Writer
@@ -32,6 +40,14 @@ class Prompter
       output_stream.print "Choose an integer from #{list.sort}: "
     end
 
+    def self.ask_play_again output_stream=$stdout
+      output_stream.print "Play again (y/n)? "
+    end
+
+    def self.ask_x_or_o output_stream=$stdout
+      output_stream.print 'Would you like to be x or o (x always goes first)? '
+    end
+
     def self.notify_not_an_int output_stream=$stdout
       output_stream.puts 'That is not an integer'
     end
@@ -40,8 +56,8 @@ class Prompter
       output_stream.puts 'That choice is not in the list'
     end
 
-    def self.ask_x_or_o output_stream=$stdout
-      output_stream.print 'Would you like to be x or o (x always goes first)? '
+    def self.notify_not_y_or_n output_stream=$stdout
+      output_stream.puts 'That choice is not valid. Please choose y or n!'
     end
 
     def self.notify_not_x_or_o output_stream=$stdout

@@ -42,17 +42,25 @@ class PrompterTest < Test::Unit::TestCase
     assert_equal 1, @writer.times_notified_not_in_list
   end
 
+  def test_play_again_happy_path
+    @reader.string_responses = ['y']
+    assert_equal 'Y', Prompter.play_again(@reader, @writer)
+    assert_equal 1, @reader.times_read_string
+    assert_equal 1, @writer.times_asked_play_again
+    assert_equal 0, @writer.times_notified_not_y_or_n
+  end
+
   def test_string_x_or_o_happy_path
-    @reader.string_responses = ["x"]
-    assert_equal "x", Prompter.x_or_o(@reader, @writer)
+    @reader.string_responses = ['x']
+    assert_equal 'X', Prompter.x_or_o(@reader, @writer)
     assert_equal 1, @reader.times_read_string
     assert_equal 1, @writer.times_asked_for_x_or_o
     assert_equal 0, @writer.times_notified_not_x_or_o
   end
   
   def test_string_x_or_o_one_invalid_input
-    @reader.string_responses = ["z", "x"]
-    assert_equal "x", Prompter.x_or_o(@reader, @writer)
+    @reader.string_responses = ['z', 'x']
+    assert_equal 'X', Prompter.x_or_o(@reader, @writer)
     assert_equal 2, @reader.times_read_string
     assert_equal 2, @writer.times_asked_for_x_or_o
     assert_equal 1, @writer.times_notified_not_x_or_o
@@ -64,14 +72,16 @@ end
 class PrompterTest
   class MockWriter
     attr_accessor :times_asked_for_int, :times_asked_for_int_in_list,
-        :times_asked_for_x_or_o, :times_notified_not_an_int,
-        :times_notified_not_in_list, :times_notified_not_x_or_o
+        :times_asked_play_again, :times_asked_for_x_or_o, :times_notified_not_an_int,
+        :times_notified_not_in_list, :times_notified_not_y_or_n, :times_notified_not_x_or_o
     def initialize
       self.times_asked_for_int = 0
       self.times_asked_for_int_in_list = 0
+      self.times_asked_play_again = 0
       self.times_asked_for_x_or_o = 0
       self.times_notified_not_an_int = 0
       self.times_notified_not_in_list = 0
+      self.times_notified_not_y_or_n = 0
       self.times_notified_not_x_or_o = 0
     end
     
@@ -86,6 +96,10 @@ class PrompterTest
     def ask_x_or_o
       self.times_asked_for_x_or_o += 1 
     end
+
+    def ask_play_again
+      self.times_asked_play_again += 1
+    end
     
     def notify_not_an_int
       self.times_notified_not_an_int += 1
@@ -93,6 +107,10 @@ class PrompterTest
 
     def notify_not_in_list
       self.times_notified_not_in_list += 1
+    end
+
+    def notify_not_y_or_n
+      self.times_notified_not_y_or_n += 1
     end
 
     def notify_not_x_or_o
