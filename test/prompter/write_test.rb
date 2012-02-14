@@ -35,6 +35,6 @@ class PrompterWriteTest < Test::Unit::TestCase
   def test_notify_not_x_or_o
     @writer.notify_not_x_or_o @stream
     @stream.rewind
-    refute @stream.empty?
+    refute @stream.read.empty?
   end
 end
