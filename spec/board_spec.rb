@@ -11,6 +11,15 @@ describe Board do
     end
   end
 
+  it "sees empty board as empty" do
+    @board.empty?.should eq(true)
+  end
+
+  it "does not see a non-empty board as empty" do
+    @board = Board.new [:x]
+    @board.empty?.should eq(false)
+  end
+
   it "gets values initialized with an array" do
     @board = Board.new [:x, :x, :x, :x, :x, :x, :x, :x, :x]
     (1..9).each do |space|

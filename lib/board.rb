@@ -49,7 +49,11 @@ class Board
   end
 
   def empty
-    (@spaces.select { |index, value| value.nil? }).keys
+    (@spaces.select { |_, value| value.nil? }).keys
+  end
+
+  def empty?
+    empty.count == (SideLength ** 2)
   end
 
   def side_length
