@@ -9,7 +9,11 @@ class HumanPlayer
 
   def play board
     ConsolePrinter.print_board board
-    choice = Prompter.integer_in_list board.empty.sort
+    choice = get_choice board
     board.set choice, @i_am
+  end
+
+  def get_choice board
+    Prompter.integer_in_list board.empty.sort
   end
 end
