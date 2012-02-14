@@ -8,7 +8,11 @@ class ComputerPlayer
   end
 
   def play board
-    choice = random_best_from(Negamax.run board)
+    if board.empty?
+      choice = random_choice_from(optimal_choices_on_empty_board)
+    else
+      choice = random_best_from(Negamax.run board)
+    end
     board.set choice, @i_am
   end
 

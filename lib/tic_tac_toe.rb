@@ -1,21 +1,22 @@
 module TicTacToe
   def self.play
+    print_start
+
     board = Board.new
     human = HumanPlayer.new ask_human_x_or_o
-    puts "Human is: #{human.is}"
     computer = ComputerPlayer.new (human.is == :x) ? :o : :x
+
     while !Scorer.over? board
       (turn(board) == human.is) ? human.play(board) : computer.play(board)
     end
 
-    puts
-    puts board
-    puts
-    if Scorer.winner? board
-      puts "Winner: #{Scorer.winner board}"
-    else
-      puts "Tie!"
-    end
+    Scorer.print_end board
+
+    # TODO:  prompt to play again
+ end
+
+  def self.print_start
+    ConsolePrinter.print_centered "Tic-Tac-Toe"
   end
 
   def self.ask_human_x_or_o
