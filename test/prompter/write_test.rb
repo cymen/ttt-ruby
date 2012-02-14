@@ -25,4 +25,16 @@ class PrompterWriteTest < Test::Unit::TestCase
     @stream.rewind
     refute @stream.read.empty?
   end
+
+  def test_ask_for_x_or_o
+    @writer.ask_x_or_o @stream
+    @stream.rewind
+    refute @stream.read.empty?
+  end
+
+  def test_notify_not_x_or_o
+    @writer.notify_not_x_or_o @stream
+    @stream.rewind
+    refute @stream.empty?
+  end
 end
