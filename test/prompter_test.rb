@@ -33,6 +33,15 @@ class PrompterTest < Test::Unit::TestCase
     assert_equal 0, @writer.times_notified_not_in_list
   end
 
+  def test_integer_in_list_one_invalid_input
+    @reader.int_responses = ['a', 8]
+    assert_equal 8, Prompter.integer_in_list([7, 8, 9], @reader, @writer)
+    assert_equal 2, @reader.times_read
+    assert_equal 2, @writer.times_asked_for_int_in_list
+    assert_equal 0, @writer.times_notified_not_an_int
+    assert_equal 1, @writer.times_notified_not_in_list
+  end
+
 end
 
 
