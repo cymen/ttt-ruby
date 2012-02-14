@@ -51,7 +51,7 @@ describe Negamax do
   end
 
   it "picks a block of opposing player" do
-  #  (Negamax.run Board.new [:x,nil,:o,nil,:x,nil,nil,nil,nil]).should have_optimal_move_of 9
+    (Negamax.run Board.new [:x,nil,:o,nil,:x,nil,nil,nil,nil]).should have_optimal_move_of 9
     (Negamax.run Board.new [:x,nil,:o,nil,nil,nil,:x]).should have_optimal_move_of 4
   end
 
@@ -59,10 +59,8 @@ describe Negamax do
     (Negamax.run Board.new [:x,nil,:o,:o,nil,nil,:x]).should have_optimal_move_of 9
   end
 
-#  # long running test: all spaces are 0
-  it "something should happen but not sure what" do
-    result = Negamax.run Board.new
-    puts "result: " + result.to_s
- end
+#  it "choose spaces 1, 3, 5, 7 and 9 as most optimal on an empty board" do
+#    (Negamax.run Board.new).should have_optimal_moves_of [1, 3, 5, 7, 9]
+#  end
 
 end

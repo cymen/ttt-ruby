@@ -41,14 +41,7 @@ module Game
   end
 
   def Game.tie? board
-    (board.empty.count == 0) or (impossible_win?(board))
-  end
-
-  def Game.impossible_win? board
-    board.get_rows.each do |row|
-      return false if same_or_nil? row
-    end
-    true
+    board.empty.count == 0
   end
 
   def Game.winner? board
