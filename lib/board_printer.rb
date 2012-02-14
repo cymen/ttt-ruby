@@ -4,8 +4,8 @@ class BoardPrinter
 
   def self.print_banner writer=Writer
     writer.display_banner_text "Tic-Tac-Toe"
-    writer.display_centered_text "The game is simple: attempt to beat your opponent by getting 3 in a row"
-    writer.display_centered_text "(horizontal, vertical or diagonal)"
+    writer.display_centered_text "Attempt to beat your opponent by getting 3 in a row"
+    writer.display_centered_text "(horizontal, vertical or diagonal)."
   end
 
   def self.print_board board, writer=Writer

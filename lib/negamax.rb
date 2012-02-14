@@ -4,13 +4,13 @@ module Negamax
   Optimal = [1, 3, 5, 7, 9]
 
   def self.run board
-    @initial_player = Game.turn board
+    @initial_player = TicTacToe.turn board
     @spaces_count = board.count
 
     result = {}
 
     sort_choices_optimally(board.empty).each do |space|
-      board.set space, Game.turn(board)
+      board.set space, TicTacToe.turn(board)
       result[space] = -negamax(board)
       board.clear space
     end
@@ -20,9 +20,9 @@ module Negamax
 
   def self.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
     return alpha if depth > (@spaces_count - 1)
-    return sign_toggle(board) * analysis(board, depth) if Game.over? board
+    return sign_toggle(board) * analysis(board, depth) if Scorer.over? board
 
-    player = Game.turn board
+    player = TicTacToe.turn board
     max = -Infinity
 
     sort_choices_optimally(board.empty).each do |space|
@@ -37,9 +37,9 @@ module Negamax
   end
 
   def self.analysis board, depth
-   if Game.winner? board
+   if Scorer.winner? board
       return (2 ** -depth) * ((initial_player_is_winner board) ? 1 : -1)
-    elsif Game.tie? board
+    elsif Scorer.tie? board
       return 0
     end
   end  
@@ -49,7 +49,7 @@ module Negamax
   end
 
   def self.initial_player_is_winner board
-    @initial_player == Game.winner(board)
+    @initial_player == Scorer.winner(board)
   end
 
   def self.sort_choices_optimally choices

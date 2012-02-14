@@ -1,7 +1,7 @@
-module Game
+module TicTacToe
   def self.play
     board = Board.new
-    while !over? board
+    while !Scorer.over? board
       if turn(board) == :x
         all_choices = Negamax.run board
         best_choices = all_choices.reject { |key, value| value != all_choices.values.max }.keys
@@ -25,8 +25,8 @@ module Game
     puts
     puts board
     puts
-    if self.winner? board
-      puts "Winner: #{winner board}"
+    if Scorer.winner? board
+      puts "Winner: #{Scorer.winner board}"
     else
       puts "Tie!"
     end
@@ -34,32 +34,5 @@ module Game
 
   def self.turn board
     (board.count(:x) == board.count(:o)) ? :x : :o
-  end
-
-  def self.over? board
-    (winner? board or tie? board)
-  end
-
-  def self.tie? board
-    board.empty.count == 0
-  end
-
-  def self.winner? board
-    !winner(board).nil?
-  end
-
-  def self.winner board
-    board.get_rows.each do |row|
-      return row.first if same_and_not_nil? row
-    end
-    nil
-  end
-
-  def self.same_and_not_nil? row
-    (!row.first.nil? and row.uniq.length == 1)
-  end
-
-  def self.same_or_nil? row
-    row.select { |value| !value.nil? }.uniq.count <= 1
   end
 end
