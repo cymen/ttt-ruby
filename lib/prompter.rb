@@ -45,7 +45,7 @@ class Prompter
     end
 
     def self.ask_x_or_o output_stream=$stdout
-      output_stream.print 'Would you like to be x or o (x always goes first)? '
+      output_stream.print "\nWould you like to be x or o (x always goes first)? " 
     end
 
     def self.notify_not_an_int output_stream=$stdout

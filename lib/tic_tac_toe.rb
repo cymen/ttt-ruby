@@ -2,6 +2,15 @@ module TicTacToe
   def self.play
     print_start
 
+    game
+
+    while(play_again)
+      game
+    end
+
+  end
+
+  def self.game
     board = Board.new
     human = HumanPlayer.new ask_human_x_or_o
     computer = ComputerPlayer.new (human.is == :x) ? :o : :x
@@ -11,9 +20,7 @@ module TicTacToe
     end
 
     Scorer.print_end board
-
-    # TODO:  prompt to play again
- end
+  end
 
   def self.print_start
     ConsolePrinter.print_centered "Tic-Tac-Toe"
@@ -21,6 +28,10 @@ module TicTacToe
 
   def self.ask_human_x_or_o
     (Prompter.x_or_o.casecmp('x') == 0) ? :x : :o
+  end
+
+  def self.play_again
+    Prompter.play_again == 'Y'
   end
 
   def self.turn board
