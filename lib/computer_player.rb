@@ -8,7 +8,8 @@ class ComputerPlayer
   end
 
   def play board
-    board.set(random_best_from Negamax.run(board), @i_am)
+    choice = random_best_from(Negamax.run board)
+    board.set choice, @i_am
   end
 
   def optimal_choices_on_empty_board
@@ -24,6 +25,6 @@ class ComputerPlayer
   end
 
   def random_best_from choices
-    random_choices_from filter_weighted_choices_to_best(choices)
+    random_choice_from filter_weighted_choices_to_best(choices)
   end
 end

@@ -2,6 +2,7 @@ module TicTacToe
   def self.play
     board = Board.new
     human = HumanPlayer.new ask_human_x_or_o
+    puts "Human is: #{human.is}"
     computer = ComputerPlayer.new (human.is == :x) ? :o : :x
     while !Scorer.over? board
       (turn(board) == human.is) ? human.play(board) : computer.play(board)
@@ -18,8 +19,7 @@ module TicTacToe
   end
 
   def self.ask_human_x_or_o
-    choice = Prompter.x_or_o
-    (choice == 'X') ? :x : :o
+    (Prompter.x_or_o.casecmp('x') == 0) ? :x : :o
   end
 
   def self.turn board

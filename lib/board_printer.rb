@@ -2,13 +2,7 @@ class BoardPrinter
   ConsoleWidth = 80
   CellWidth = 5
 
-  def self.print_banner writer=Writer
-    writer.display_banner_text "Tic-Tac-Toe"
-    writer.display_centered_text "Attempt to beat your opponent by getting 3 in a row"
-    writer.display_centered_text "(horizontal, vertical or diagonal)."
-  end
-
-  def self.print_board board, writer=Writer
+  def self.print board, writer=Writer
     writer.display_board board
   end
   
@@ -47,7 +41,7 @@ class BoardPrinter
 
     def self.board_row_contents board, row_index
       content = lambda do |index|
-        board.get(index).to_s.center(CellWidth)
+        board.get(index).to_s.upcase.center(CellWidth)
       end
 
       board_row(content, row_index.first, row_index.last).center(ConsoleWidth)
