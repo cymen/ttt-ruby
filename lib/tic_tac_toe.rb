@@ -1,6 +1,9 @@
 module TicTacToe
   def self.play
     board = Board.new
+    human = ask_x_or_o
+    puts "human is: #{human}"
+    exit
     while !Scorer.over? board
       if turn(board) == :x
         all_choices = Negamax.run board
@@ -30,6 +33,10 @@ module TicTacToe
     else
       puts "Tie!"
     end
+  end
+
+  def self.ask_x_or_o
+    Prompter.x_or_o
   end
 
   def self.turn board

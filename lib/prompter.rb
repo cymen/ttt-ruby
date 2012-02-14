@@ -18,7 +18,7 @@ class Prompter
   def self.x_or_o reader=Reader, writer=Writer
     writer.ask_x_or_o
     choice = reader.read_string
-    return choice if ["X", "O"].count(choice.upcase) > 0
+    return choice if ['X', 'O'].count(choice.upcase) > 0
     writer.notify_not_x_or_o
     self.x_or_o reader, writer
   end
@@ -55,7 +55,7 @@ class Prompter
       input[/^\d+$/] && input.to_i
     end
     def self.read_string input_stream=$stdin
-      input_stream.gets
+      input_stream.gets.chomp
     end
   end
 end
