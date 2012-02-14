@@ -1,11 +1,11 @@
 require 'computer_player'
 
-RSpec::Matchers.define :should_be_in do |choice|
-  match do |actual|
-    actual.count choice > 0
+RSpec::Matchers.define :be_in do |choices|
+  match do |choice|
+    choices.count choice > 0
   end
-  failure_message_for_should do |actual|
-    "expected that #{choice} would be in #{actual}"
+  failure_message_for_should do |choices|
+    "expected that #{choice} would be in #{choices}"
   end
 end
 
@@ -26,7 +26,12 @@ describe ComputerPlayer do
   end
 
   it "can choose a random choice from an array of choices" do
-    ComputerPlayer.new(:x).
+    array = [1, 2, 3, 4, 5]
+    ComputerPlayer.new(:x).random_choice_from(array).should be_in(array)
+  end
+
+  it "can choose a random best from hash of space => weight choices" do
+    ComputerPlayer.new(:x).random_best_from({ 1 => 10, 2 => 3, 3 => 9, 4 => 10, 5 => 6, 6 => 10 }).should be_in([1, 4, 6])
   end
 
 end
