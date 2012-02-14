@@ -1,5 +1,6 @@
 module Negamax
 
+  MaxDepth = 5
   Infinity = 1.0/0
   Optimal = [1, 3, 5, 7, 9]
 
@@ -19,7 +20,7 @@ module Negamax
   end
 
   def self.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
-    return alpha if depth > (@spaces_count - 1)
+    return alpha if depth > MaxDepth
     return sign_toggle(board) * analysis(board, depth) if Scorer.over? board
 
     player = TicTacToe.turn board
