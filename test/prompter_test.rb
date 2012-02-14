@@ -49,6 +49,14 @@ class PrompterTest < Test::Unit::TestCase
     assert_equal 1, @writer.times_asked_for_x_or_o
     assert_equal 0, @writer.times_notified_not_x_or_o
   end
+  
+  def test_string_x_or_o_one_invalid_input
+    @reader.string_responses = ["z", "x"]
+    assert_equal "x", Prompter.x_or_o(@reader, @writer)
+    assert_equal 2, @reader.times_read_string
+    assert_equal 2, @writer.times_asked_for_x_or_o
+    assert_equal 1, @writer.times_notified_not_x_or_o
+  end
 end
 
 
