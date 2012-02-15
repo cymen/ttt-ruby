@@ -1,4 +1,4 @@
-class ConsolePrinter
+module ConsolePrinter
   ConsoleWidth = 80
   CellWidth = 5
 
@@ -45,7 +45,7 @@ class ConsolePrinter
         index.to_s.ljust(CellWidth)
       end
 
-      board_row(header, row_index.first, row_index.last).center(ConsoleWidth)
+      board_row(header, row_index).center(ConsoleWidth)
     end
 
     def self.board_row_contents board, row_index
@@ -53,30 +53,30 @@ class ConsolePrinter
         board.get(index).to_s.upcase.center(CellWidth)
       end
 
-      board_row(content, row_index.first, row_index.last).center(ConsoleWidth)
+      board_row(content, row_index).center(ConsoleWidth)
     end
 
     def self.board_row_empty row_index
-      board_row_repeated_char ' ', row_index.first, row_index.last
+      board_row_repeated_char ' ', row_index
     end
 
     def self.board_row_seperator row_index
-      board_row_repeated_char '_', row_index.first, row_index.last
+      board_row_repeated_char '_', row_index
     end
 
-    def self.board_row_repeated_char char, first, last
+    def self.board_row_repeated_char char, row_index
       repeat = lambda do |index|
         char * CellWidth
       end
 
-      board_row(repeat, first, last).center(ConsoleWidth)
+      board_row(repeat, row_index).center(ConsoleWidth)
     end
 
-    def self.board_row callback, first, last
+    def self.board_row callback, row_index
       line = ""
-      (first..last).each do |index|
+      (row_index.first..row_index.last).each do |index|
         line += callback.call(index).to_s
-        line += '|' if index != last
+        line += '|' if index != row_index.last
       end
       line
     end
