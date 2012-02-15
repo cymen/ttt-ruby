@@ -1,9 +1,14 @@
 module Negamax
 
+  # TODO:  turn into class so can inject value into intial_player
+
+  # put TicTacToe.turn into module which can include where used (mixin)
+
   Infinity = 1.0/0
   Optimal = [1, 3, 5, 7, 9]
 
   def self.run board
+    # TODO:  put TicTacToe.turn into utility class or into Board perhaps
     @initial_player = TicTacToe.turn board
     @spaces_count = board.count
 

@@ -41,19 +41,15 @@ module ConsolePrinter
     end
 
     def self.board_row_header row_index
-      header = lambda do |index|
+      board_row row_index do |index|
         index.to_s.ljust(CellWidth)
-      end
-
-      board_row(header, row_index).center(ConsoleWidth)
+      end.center(ConsoleWidth)
     end
 
     def self.board_row_contents board, row_index
-      content = lambda do |index|
+      board_row row_index do |index|
         board.get(index).to_s.upcase.center(CellWidth)
-      end
-
-      board_row(content, row_index).center(ConsoleWidth)
+      end.center(ConsoleWidth)
     end
 
     def self.board_row_empty row_index
@@ -65,20 +61,17 @@ module ConsolePrinter
     end
 
     def self.board_row_repeated_char char, row_index
-      repeat = lambda do |index|
+      board_row row_index do |index|
         char * CellWidth
-      end
-
-      board_row(repeat, row_index).center(ConsoleWidth)
+      end.center(ConsoleWidth)
     end
 
-    def self.board_row callback, row_index
-      line = ""
-      (row_index.first..row_index.last).each do |index|
-        line += callback.call(index).to_s
-        line += '|' if index != row_index.last
+    def self.board_row row_index
+      (row_index.first..row_index.last).inject('') do |line, index|
+        line << (yield index).to_s
+        line << '|' if index != row_index.last
+        line
       end
-      line
     end
   end
 end

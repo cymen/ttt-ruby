@@ -1,3 +1,5 @@
+require 'negamax.rb'
+
 class ComputerPlayer
   def initialize i_am
     @i_am = i_am
