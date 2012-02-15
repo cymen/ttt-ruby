@@ -1,7 +1,7 @@
 require 'tic_tac_toe'
 
 describe TicTacToe do
-  it "should determine the current turn based on the value of the board spaces" do
+  it "determines current turn based on board" do
     TicTacToe.turn(Board.new).should eq(:x)
     TicTacToe.turn(Board.new [:x]).should eq(:o)
   end
