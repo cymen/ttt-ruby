@@ -37,7 +37,7 @@ class Prompter
     end
 
     def self.ask_for_int_in_list list, output_stream=$stdout
-      output_stream.print "Choose an integer from #{list.sort}: "
+      output_stream.print "Choose a space from #{list.sort}: "
     end
 
     def self.ask_play_again output_stream=$stdout
