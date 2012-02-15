@@ -1,21 +1,27 @@
-module Negamax
+require 'tic_tac_toe_turn'
+
+class Negamax
+  include TicTacToeTurn
 
   # TODO:  turn into class so can inject value into intial_player
 
   # put TicTacToe.turn into module which can include where used (mixin)
 
+  attr_accessor :initial_player
+  attr_reader :spaces_count
+
   Infinity = 1.0/0
   Optimal = [1, 3, 5, 7, 9]
 
-  def self.run board
+  def run board
     # TODO:  put TicTacToe.turn into utility class or into Board perhaps
-    @initial_player = TicTacToe.turn board
+    @initial_player = turn board
     @spaces_count = board.count
 
     weighted_choices = {}
 
     sort_choices_optimally(board.empty).each do |space|
-      board.set space, TicTacToe.turn(board)
+      board.set space, turn(board)
       weighted_choices[space] = -negamax(board)
       board.clear space
     end
@@ -23,11 +29,11 @@ module Negamax
     weighted_choices
   end
 
-  def self.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
+  def negamax board, depth = 1, alpha = -Infinity, beta = Infinity
     return alpha if depth > (@spaces_count - 1) 
     return sign_toggle(board) * analysis(board, depth) if Scorer.over? board
 
-    player = TicTacToe.turn board
+    player = turn board
     max = -Infinity
 
     sort_choices_optimally(board.empty).each do |space|
@@ -41,7 +47,7 @@ module Negamax
     max
   end
 
-  def self.analysis board, depth
+  def analysis board, depth
    if Scorer.winner? board
       return (2 ** -depth) * ((initial_player_is_winner board) ? 1 : -1)
     elsif Scorer.tie? board
@@ -49,17 +55,17 @@ module Negamax
     end
   end  
 
-  def self.sign_toggle board
+  def sign_toggle board
     (initial_player_is_winner board) ? -1 : 1
   end
 
 
   # TODO:  figure out how to test -- problem: how to set @initial_player value in test?
-  def self.initial_player_is_winner board
+  def initial_player_is_winner board
     @initial_player == Scorer.winner(board)
   end
 
-  def self.sort_choices_optimally choices
+  def sort_choices_optimally choices
     optimized_choices = []
     choices.each do |choice|
       if Optimal.count(choice) > 0

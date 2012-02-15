@@ -1,12 +1,15 @@
-require 'board.rb'
-require 'console_printer.rb'
-require 'scorer.rb'
-require 'prompter.rb'
-require 'computer_player.rb'
-require 'human_player.rb'
+require 'board'
+require 'console_printer'
+require 'scorer'
+require 'prompter'
+require 'computer_player'
+require 'human_player'
+require 'tic_tac_toe_turn'
 
-module TicTacToe
-  def self.play
+class TicTacToe
+  include TicTacToeTurn
+
+  def play
     print_start
 
     game
@@ -18,7 +21,7 @@ module TicTacToe
   end
 
   # create mock players
-  def self.game # player1, player2
+  def game # player1, player2
     board = Board.new
     human = HumanPlayer.new ask_human_x_or_o
     computer = ComputerPlayer.new (human.is == :x) ? :o : :x
@@ -33,11 +36,11 @@ module TicTacToe
 
   #class TicTacToeHelpers
 
-  def self.print_start
+  def print_start
     ConsolePrinter.print_centered "Tic-Tac-Toe"
   end
 
-  def self.print_end board
+  def print_end board
     ConsolePrinter.print_board board
 
     if Scorer.winner? board
@@ -47,16 +50,13 @@ module TicTacToe
     end
   end
 
-  def self.ask_human_x_or_o
+  def ask_human_x_or_o
     (Prompter.x_or_o.casecmp('x') == 0) ? :x : :o
   end
 
-  def self.play_again
+  def play_again
     Prompter.play_again == 'Y'
   end
 
-  def self.turn board
-    (board.count(:x) == board.count(:o)) ? :x : :o
-  end
-  #end
+ #end
 end
