@@ -39,7 +39,7 @@ describe Negamax do
   end
 
   it "picks a win over a block" do
-    Negamax.run(Board.new([:x,:x,:o,:x,:x,:o,:o]).should have_optimal_move_of 9
+    Negamax.run(Board.new([:x,:x,:o,:x,:x,:o,:o])).should have_optimal_move_of 9
   end
 
   it "picks immediate win" do
