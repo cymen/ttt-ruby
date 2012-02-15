@@ -18,8 +18,11 @@ module Scorer
     nil
   end
 
-  def self.print_end board
+  def self.same_and_not_nil? row
+    (!row.first.nil? and row.uniq.length == 1)
+  end
 
+  def self.print_end board
     ConsolePrinter.print_board board
 
     if Scorer.winner? board
@@ -27,9 +30,5 @@ module Scorer
     else
       ConsolePrinter.print_centered "Tie!"
     end
-  end
-
-  def self.same_and_not_nil? row
-    (!row.first.nil? and row.uniq.length == 1)
   end
 end
