@@ -35,6 +35,14 @@ describe Negamax do
     choices.slice(0, Negamax::Optimal.count).sort.should eq(Negamax::Optimal)
   end
 
+  it "analyzes tied game" do
+    Negamax.analysis(Board.new([:x,:o,:x,:o,:x,:o,:o,:x,:o]), 1).should eq(0)
+  end
+
+  it "analyzes won game" do
+    Negamax.analysis(Board.new([:x,:o,nil,:x,:o,nil,:x]), 1).should eq((2 ** -1) * -1)
+  end
+
   it "doesn't pick an obvious loose" do
     Negamax.run(Board.new([:x,nil,nil,nil,:o])).should not_have_choice_of 9
   end
