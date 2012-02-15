@@ -53,7 +53,7 @@ class TicTacToe
   end
 
   def play_again?
-    Prompter.play_again == 'Y'
+    Prompter.play_again.casecmp('Y') == 0
   end
 
  #end
