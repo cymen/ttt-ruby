@@ -27,7 +27,7 @@ describe Board do
     end
   end
 
-  it "shows all spaces as empy on an empy board" do
+  it "shows all spaces as empty on an empty board" do
     @board.empty.should eq([1, 2, 3, 4, 5, 6, 7, 8, 9])
   end
 
@@ -56,6 +56,20 @@ describe Board do
     rows.kind_of?(Array).should eq(true)
     rows.count.should eq(8)
     rows.each { |row| row.should eq([:o,:o,:o]) }
+  end
+
+  it "provides set of horizontal row index set" do
+    set = @board.get_horizontal_row_index_sets
+    set.kind_of?(Array).should eq(true)
+    set.count.should be > 0
+  end
+
+  it "returns length of a side" do
+    @board.side_length.should be > 0
+  end
+
+  it "counts number of spaces on an empty board" do
+    @board.count.should eq(@board.side_length ** 2)
   end
 
   it "counts the number of board spaces with a specific value" do
