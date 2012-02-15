@@ -1,7 +1,7 @@
 require 'human_player'
 
 describe HumanPlayer do
-  it "it is what it is initialized to" do
+  it "knows it's play type" do
     HumanPlayer.new(:x).is.should eq (:x)
   end
 end

@@ -31,5 +31,4 @@ describe ComputerPlayer do
   it "can choose a random best from hash of space => weight choices" do
     ComputerPlayer.new(:x).random_best_from({ 1 => 10, 2 => 3, 3 => 9, 4 => 10, 5 => 6, 6 => 10 }).should be_in([1, 4, 6])
   end
-
 end
