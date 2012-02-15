@@ -1,0 +1,8 @@
+make web
+can use sinatra, rails, etc
+state can be wherever
+
+testing
+- can use rspec for everything
+- plugins to test sinatra controllers
+  (uses rack/middleware not HTTP level)
