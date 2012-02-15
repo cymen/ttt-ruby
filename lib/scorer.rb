@@ -23,7 +23,7 @@ module Scorer
     ConsolePrinter.print_board board
 
     if Scorer.winner? board
-      ConsolePrinter.print_centered "Winner: #{Scorer.winner board}"
+      ConsolePrinter.print_centered "#{Scorer.winner(board).upcase} won!"
     else
       ConsolePrinter.print_centered "Tie!"
     end
