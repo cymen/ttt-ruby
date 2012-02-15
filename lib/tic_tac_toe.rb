@@ -14,10 +14,9 @@ class TicTacToe
 
     game
 
-    while play_again
+    while play_again?
       game
     end
-
   end
 
   # create mock players
@@ -53,7 +52,7 @@ class TicTacToe
     (Prompter.x_or_o.casecmp('x') == 0) ? :x : :o
   end
 
-  def play_again
+  def play_again?
     Prompter.play_again == 'Y'
   end
 
