@@ -21,14 +21,4 @@ module Scorer
   def self.same_and_not_nil? row
     (!row.first.nil? and row.uniq.length == 1)
   end
-
-  def self.print_end board
-    ConsolePrinter.print_board board
-
-    if Scorer.winner? board
-      ConsolePrinter.print_centered "#{Scorer.winner(board).upcase} won!"
-    else
-      ConsolePrinter.print_centered "Tie!"
-    end
-  end
 end

@@ -19,11 +19,21 @@ module TicTacToe
       (turn(board) == human.is) ? human.play(board) : computer.play(board)
     end
 
-    Scorer.print_end board
+    print_end board
   end
 
   def self.print_start
     ConsolePrinter.print_centered "Tic-Tac-Toe"
+  end
+
+  def self.print_end board
+    ConsolePrinter.print_board board
+
+    if Scorer.winner? board
+      ConsolePrinter.print_centered "#{Scorer.winner(board).upcase} won!"
+    else
+      ConsolePrinter.print_centered "Tie!"
+    end
   end
 
   def self.ask_human_x_or_o
