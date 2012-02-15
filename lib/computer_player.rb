@@ -5,8 +5,8 @@ class ComputerPlayer
     @i_am = i_am
   end
 
-  def is
-    @i_am
+  def is? symbol
+    @i_am == symbol
   end
 
   def play board

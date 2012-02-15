@@ -11,7 +11,8 @@ end
 
 describe ComputerPlayer do
   it "knows it's play type" do
-    ComputerPlayer.new(:o).is.should eq(:o)
+    ComputerPlayer.new(:o).is?(:o).should eq(true)
+    ComputerPlayer.new(:x).is?(:o).should eq(false)
   end
 
   it "knows optimal choices for an empty board" do

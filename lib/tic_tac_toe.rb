@@ -24,11 +24,10 @@ class TicTacToe
   def game # player1, player2
     board = Board.new
     human = HumanPlayer.new ask_human_x_or_o
-    computer = ComputerPlayer.new (human.is == :x) ? :o : :x
+    computer = ComputerPlayer.new (human.is? :x) ? :o : :x
 
     while !Scorer.over? board
-      #(human.is?(turn board)) ? 
-      (turn(board) == human.is) ? human.play(board) : computer.play(board)
+      (human.is? turn(board)) ? human.play(board) : computer.play(board)
     end
 
     print_end board
