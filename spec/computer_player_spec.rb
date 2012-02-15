@@ -9,10 +9,8 @@ RSpec::Matchers.define :be_in do |choices|
   end
 end
 
-
-
 describe ComputerPlayer do
-  it "it is what it is initialized to" do
+  it "knows it's play type" do
     ComputerPlayer.new(:o).is.should eq(:o)
   end
 
