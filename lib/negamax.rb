@@ -7,15 +7,15 @@ module Negamax
     @initial_player = TicTacToe.turn board
     @spaces_count = board.count
 
-    result = {}
+    weighted_choices = {}
 
     sort_choices_optimally(board.empty).each do |space|
       board.set space, TicTacToe.turn(board)
-      result[space] = -negamax(board)
+      weighted_choices[space] = -negamax(board)
       board.clear space
     end
 
-    return result
+    weighted_choices
   end
 
   def self.negamax board, depth = 1, alpha = -Infinity, beta = Infinity
@@ -33,7 +33,7 @@ module Negamax
       return alpha if alpha >= beta
     end
 
-    return max
+    max
   end
 
   def self.analysis board, depth
@@ -48,19 +48,21 @@ module Negamax
     (initial_player_is_winner board) ? -1 : 1
   end
 
+
+  # TODO:  figure out how to test -- problem: how to set @initial_player value in test?
   def self.initial_player_is_winner board
     @initial_player == Scorer.winner(board)
   end
 
   def self.sort_choices_optimally choices
-    result = []
+    optimized_choices = []
     choices.each do |choice|
       if Optimal.count(choice) > 0
-        result.unshift choice
+        optimized_choices.unshift choice
       else
-        result.push choice
+        optimized_choices.push choice
       end
     end
-    result
+    optimized_choices
   end
 end

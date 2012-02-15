@@ -30,6 +30,11 @@ RSpec::Matchers.define :not_have_choice_of do |unexpected|
 end
 
 describe Negamax do
+  it "sorts choices to put known optimal first" do
+    choices = Negamax.sort_choices_optimally([1,2,3,4,5,6,7,8,9])
+    choices.slice(0, Negamax::Optimal.count).sort.should eq(Negamax::Optimal)
+  end
+
   it "doesn't pick an obvious loose" do
     Negamax.run(Board.new([:x,nil,nil,nil,:o])).should not_have_choice_of 9
   end
