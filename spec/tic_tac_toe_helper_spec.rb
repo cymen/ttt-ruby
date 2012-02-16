@@ -13,6 +13,11 @@ describe TicTacToeHelper do
     players.uniq.count.should eq(2)
   end
 
+  it "determines the opposite player of given player" do
+    TicTacToeHelperTester.new.opposite_of(:x).should eq(:o)
+    TicTacToeHelperTester.new.opposite_of(:o).should eq(:x)
+  end
+
   it "determines current turn based on board" do
     TicTacToeHelperTester.new.turn(Board.new).should eq(:x)
     TicTacToeHelperTester.new.turn(Board.new [:x]).should eq(:o)

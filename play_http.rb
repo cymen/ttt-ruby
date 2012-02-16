@@ -1,7 +1,7 @@
 $: << 'lib'
 require 'sinatra'
 require 'json'
-require 'tic_tac_toe_turn'
+require 'tic_tac_toe_helper'
 require 'computer_player'
 require 'board'
 require 'html_printer'
@@ -9,10 +9,13 @@ require 'scorer'
 
 class TicTacToe < Sinatra::Base
   use Rack::Session::Pool
-  include TicTacToeTurn
+  include TicTacToeHelper
 
   get '/' do
     @flash = get_flash
+
+    redirect to('/choose_player') if get_player.nil?
+
     board = get_board
     @board_html = HtmlPrinter.print_board(board, '/play')
     erb :index
@@ -22,7 +25,13 @@ class TicTacToe < Sinatra::Base
     erb :choose_player
   end
 
-  post '/choose_player/:player' do
+  get '/choose_player/:player' do
+    player = params[:player]
+
+    save_player :x if player.casecmp('x', player) == 0
+    save_player :o if player.casecmp('o', player) == 0
+
+    redirect to('/')
   end
 
   get '/play/:space' do
@@ -40,7 +49,7 @@ class TicTacToe < Sinatra::Base
   end
 
   get '/reset' do
-    save_board Board.new
+    reset
 
     redirect to('/')
   end
@@ -59,6 +68,11 @@ class TicTacToe < Sinatra::Base
 
   def save_player player
     session[:player] = Marshal.dump(player)
+  end
+
+  def reset
+    session.delete(:board)
+    session.delete(:player)
   end
 
   def flash message
