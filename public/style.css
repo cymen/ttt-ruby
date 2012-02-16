@@ -1,3 +1,7 @@
+.clear {
+  clear: both
+}
+
 .space {
   font-family: sans-serif;
   font-size: 3em;
