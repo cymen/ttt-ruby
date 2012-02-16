@@ -1,4 +1,5 @@
 require 'tic_tac_toe_turn'
+require 'scorer'
 
 class Negamax
   include TicTacToeTurn

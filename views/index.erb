@@ -3,15 +3,15 @@
   <head>
     <title>Tic-tac-toe</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
   </head>
   <body>
+    <div id="flash"><%= @flash %></div>
     <h1>Tic-tac-toe</h1>
-    <div id="player_prompt">
+    <div id="player_prompt" style="display: none">
       Would you like to be x or o (x always goes first)?
     </div>
-    <div id="board" style="display: none">
-      <%= @board %>
+    <div id="board" zstyle="display: none">
+      <%= @board_html %>
     </div>
   </body>
 </html>
