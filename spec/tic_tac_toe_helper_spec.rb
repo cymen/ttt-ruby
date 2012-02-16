@@ -13,6 +13,12 @@ describe TicTacToeHelper do
     players.uniq.count.should eq(2)
   end
 
+  it "returns the two player labels" do
+    labels = TicTacToeHelperTester.new.get_player_labels
+    labels.count.should eq(2)
+    labels.uniq.count.should eq(2)
+  end
+
   it "determines current turn based on board" do
     TicTacToeHelperTester.new.turn(Board.new).should eq(:x)
     TicTacToeHelperTester.new.turn(Board.new [:x]).should eq(:o)
