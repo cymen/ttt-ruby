@@ -17,6 +17,8 @@ class TicTacToe < Sinatra::Base
     redirect to('/choose_player') if get_player.nil?
 
     board = get_board
+    computer_play board
+
     @board_html = HtmlPrinter.print_board(board, '/play')
     erb :index
   end
@@ -28,8 +30,7 @@ class TicTacToe < Sinatra::Base
   get '/choose_player/:player' do
     player = params[:player]
 
-    save_player :x if player.casecmp('x', player) == 0
-    save_player :o if player.casecmp('o', player) == 0
+    (player.casecmp('x') == 0) ? save_player(:x) : save_player(:o)
 
     redirect to('/')
   end
@@ -38,11 +39,11 @@ class TicTacToe < Sinatra::Base
     board = get_board
     space = params[:space].to_i
 
-    error "Invalid move: nonexistent space!" if space > 9 or space < 1
-    error "Invalid move: space already played!" if !board.get(space).nil?
+    error "Invalid play attempt: nonexistent space!" if space > 9 or space < 1
+    error "Invalid play attempt: space already played!" if !board.get(space).nil?
+    error "Invalid play attempt: it's not your turn!" if turn(board) != get_player
 
-    board.set(space, :x)
-    ComputerPlayer.new(:o).play(board)
+    board.set space, get_player
     save_board board
 
     redirect to('/')
@@ -52,6 +53,11 @@ class TicTacToe < Sinatra::Base
     reset
 
     redirect to('/')
+  end
+
+  def computer_play board
+    ComputerPlayer.new(opposite_of get_player).play(board) if turn(board)== opposite_of(get_player)
+    save_board board
   end
 
   def get_board
