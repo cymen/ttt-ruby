@@ -1,8 +1,8 @@
-require 'tic_tac_toe_turn'
+require 'tic_tac_toe_helper'
 require 'scorer'
 
 class Negamax
-  include TicTacToeTurn
+  include TicTacToeHelper
 
   # TODO:  turn into class so can inject value into intial_player
 

@@ -18,6 +18,13 @@ class TicTacToe < Sinatra::Base
     erb :index
   end
 
+  get '/choose_player' do
+    erb :choose_player
+  end
+
+  post '/choose_player/:player' do
+  end
+
   get '/play/:space' do
     board = get_board
     space = params[:space].to_i
@@ -42,8 +49,16 @@ class TicTacToe < Sinatra::Base
     (!session[:board].nil?) ? Marshal.load(session[:board]) : Board.new
   end
 
+  def get_player
+    (!session[:player].nil?) ? Marshal.load(session[:player]) : nil
+  end
+
   def save_board board
     session[:board] = Marshal.dump(board)
+  end
+
+  def save_player player
+    session[:player] = Marshal.dump(player)
   end
 
   def flash message

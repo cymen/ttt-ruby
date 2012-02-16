@@ -4,10 +4,10 @@ require 'scorer'
 require 'prompter'
 require 'computer_player'
 require 'human_player'
-require 'tic_tac_toe_turn'
+require 'tic_tac_toe_helper'
 
 class TicTacToe
-  include TicTacToeTurn
+  include TicTacToeHelper
 
   def play
     print_start
