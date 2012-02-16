@@ -5,6 +5,7 @@ require 'tic_tac_toe_turn'
 require 'computer_player'
 require 'board'
 require 'html_printer'
+require 'scorer'
 
 class TicTacToe < Sinatra::Base
   use Rack::Session::Pool
@@ -20,14 +21,20 @@ class TicTacToe < Sinatra::Base
   get '/play/:space' do
     board = get_board
     space = params[:space].to_i
-    
+
     error "Invalid move: nonexistent space!" if space > 9 or space < 1
     error "Invalid move: space already played!" if !board.get(space).nil?
 
     board.set(space, :x)
     ComputerPlayer.new(:o).play(board)
     save_board board
-    
+
+    redirect to('/')
+  end
+
+  get '/reset' do
+    save_board Board.new
+
     redirect to('/')
   end
 
