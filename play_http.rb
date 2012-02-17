@@ -26,7 +26,7 @@ class TicTacToe < Sinatra::Base
     erb :choose_player
   end
 
-  get '/choose_player/:player' do
+  post '/choose_player' do
     player = params[:player]
 
     (player.casecmp('x') == 0) ? save_player(:x) : save_player(:o)

@@ -2,16 +2,31 @@
 <html>
   <head>
     <title>Tic-tac-toe</title>
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <div id="flash"><%= @flash %></div>
     <h1>Tic-tac-toe</h1>
     <div id="player_prompt">
-      Would you like to be <a href="/choose_player/x">X</a> or <a href="/choose_player/o">O</a> (x always goes first)?
+      <p>Would you like to be <strong>X</strong> or <strong>O</strong>?</p>
+      <p>
+        <form action="/choose_player" method="post">
+          <ul class="flat">
+            <li><label><input type="radio" name="player" value="x" />X</label></li>
+            <li><label><input type="radio" name="player" value="o" />O</label></li>
+            <li><input type="submit"></li>
+        </ul>
+        </form>
+      </p>
     </div>
     <p class="clear">
       <a href="/reset">reset</a>
     </p>
   </body>
+  <script type="text/javascript">
+    $('input[name=player]').change(function (event) {
+        $('form').submit();
+    });
+  </script>
 </html>
