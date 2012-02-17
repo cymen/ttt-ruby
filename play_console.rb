@@ -1,4 +1,4 @@
 $: << 'lib'
-require 'tic_tac_toe'
+require 'tic_tac_toe_console'
 
-TicTacToe.new.play
+TicTacToeConsole.new.play

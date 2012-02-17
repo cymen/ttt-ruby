@@ -6,7 +6,7 @@ require 'computer_player'
 require 'human_player'
 require 'tic_tac_toe_helper'
 
-class TicTacToe
+class TicTacToeConsole
   include TicTacToeHelper
 
   def play
