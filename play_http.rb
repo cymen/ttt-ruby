@@ -55,6 +55,7 @@ class TicTacToe < Sinatra::Base
     redirect to('/') if !Scorer.over? board
 
     @spaces = board.get_all_spaces
+    @winning_indexes = board.get_winning_row_index_set
     @over = (Scorer.winner? board) ? "#{Scorer.winner(board).upcase} won!" : "Tie!"
     erb :over
   end

@@ -1,12 +1,10 @@
-<h2><%= @over %></h2>
-
 <div id="board">
   <% for @index, @value in @spaces %>
     <% if @value.nil? %>
-      <div class="space empty">
+      <div class="space empty dull">
       </div>
     <% else %>
-      <div class="space <%= @value.to_s %>">
+      <div class="space <%= @value.to_s %> <%= (@winning_indexes.count(@index) > 0) ? "bright" : "dull" %>">
         <%= @value.to_s %>
       </div>
     <% end %>
@@ -14,5 +12,6 @@
 </div>
 
 <p class="clear">
+  <h2><%= @over %></h2>
   <h2><a href="/reset">Play again?</a></h2>
 </p>

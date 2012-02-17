@@ -46,7 +46,7 @@ class Board
     on_all_row_index_sets do |row_index|
       return row_index if Scorer.same_and_not_nil?(get_row(row_index))
     end
-    nil
+    []
   end
 
   def on_all_row_index_sets

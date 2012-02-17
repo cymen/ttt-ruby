@@ -67,7 +67,7 @@ describe Board do
   end
 
   it "finds the row index set for the winning row" do
-    @board.get_winning_row_index_set.should eq(nil)
+    @board.get_winning_row_index_set.should eq([])
     @board = Board.new [:x,:x,:x]
     @board.get_winning_row_index_set.should eq([1,2,3])
   end
