@@ -66,6 +66,12 @@ describe Board do
     rows.each { |row| row.should eq([:o,:o,:o]) }
   end
 
+  it "finds the row index set for the winning row" do
+    @board.get_winning_row_index_set.should eq(nil)
+    @board = Board.new [:x,:x,:x]
+    @board.get_winning_row_index_set.should eq([1,2,3])
+  end
+
   it "provides set of horizontal row index set" do
     set = @board.get_horizontal_row_index_sets
     set.kind_of?(Array).should eq(true)

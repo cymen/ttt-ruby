@@ -37,11 +37,22 @@ class Board
   end
 
   def get_rows
-    rows = []
-    (Horizontal_Rows + Vertical_Rows + Diagonal_Rows).each do |spaces|
-      rows.push get_row spaces
+    on_all_row_index_sets do |row_index|
+      get_row row_index
     end
-    rows
+  end
+
+  def get_winning_row_index_set
+    on_all_row_index_sets do |row_index|
+      return row_index if Scorer.same_and_not_nil?(get_row(row_index))
+    end
+    nil
+  end
+
+  def on_all_row_index_sets
+    (Horizontal_Rows + Vertical_Rows + Diagonal_Rows).inject([]) do |result, row_index|
+      result << yield(row_index)
+    end
   end
 
   def get_horizontal_row_index_sets
