@@ -1,4 +1,4 @@
-require 'tic_tac_toe'
+require 'tic_tac_toe_console'
 require 'board'
 require 'test/unit'
 
