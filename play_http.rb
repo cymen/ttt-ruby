@@ -73,29 +73,29 @@ class TicTacToe < Sinatra::Base
     end
   end
 
-  def get_board
-    (!session[:board].nil?) ? Marshal.load(session[:board]) : Board.new
+  def get_board storage=session
+    (!storage[:board].nil?) ? Marshal.load(storage[:board]) : Board.new
   end
 
-  def get_player
-    (!session[:player].nil?) ? Marshal.load(session[:player]) : nil
+  def get_player storage=session
+    (!storage[:player].nil?) ? Marshal.load(storage[:player]) : nil
   end
 
-  def save_board board
-    session[:board] = Marshal.dump(board)
+  def save_board board, storage=session
+    storage[:board] = Marshal.dump(board)
   end
 
-  def save_player player
-    session[:player] = Marshal.dump(player)
+  def save_player player, storage=session
+    storage[:player] = Marshal.dump(player)
   end
 
-  def reset
-    session.delete(:board)
-    session.delete(:player)
+  def reset storage=session
+    storage.delete(:board)
+    storage.delete(:player)
   end
 
-  def flash message
-    session[:notice] = message
+  def flash message, storage=session
+    storage[:notice] = message
   end
 
   def error message
@@ -103,8 +103,8 @@ class TicTacToe < Sinatra::Base
     redirect to('/')
   end
 
-  def get_flash
-    session.delete(:notice)
+  def get_flash storage=session
+    storage.delete(:notice)
   end
 end
 
