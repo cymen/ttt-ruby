@@ -1,6 +1,8 @@
-.clear {
-  clear: both
-}
+.hidden { display: none }
+
+.clear { clear: both }
+
+.space { float: left }
 
 .space {
   font-family: sans-serif;
@@ -17,11 +19,9 @@
   margin: 3px;
 }
 
-.row {
-  clear: both
-}
+.space:nth-child(3n+4) { clear: both }
 
-.choosable:hover {
+.empty:hover {
   background-color: #f0f2f9; 
   box-shadow: 1px 1px 4px #000;
   opacity: 0.2; filter:alpha(opacity=20);

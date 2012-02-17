@@ -12,7 +12,7 @@ module HtmlPrinter
           if !board.get(index).nil?
             value = board.get(index)
           else
-            value = "<a href='#{http_path}/#{index}'>play</a>"
+            value = "<a href='#{http_path}/#{index}'>?</a>"
           end
           row_html << "<div class='space' id='space_#{index}'>#{value}</div>"
         end

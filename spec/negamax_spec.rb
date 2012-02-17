@@ -73,7 +73,7 @@ describe Negamax do
     Negamax.new.run(Board.new([:x,nil,:o,:o,nil,nil,:x])).should have_optimal_move_of 9
   end
 
-  #it "choose spaces 1, 3, 5, 7 and 9 as most optimal on an empty board" do
-  #  Negamax.new.run(Board.new).should have_optimal_moves_of [1, 3, 5, 7, 9]
-  #end
+  it "choose spaces 1, 3, 5, 7 and 9 as most optimal on an empty board" do
+    Negamax.new.run(Board.new).should have_optimal_moves_of [1, 3, 5, 7, 9]
+  end
 end

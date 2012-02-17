@@ -20,6 +20,10 @@ class Board
     @spaces[space]
   end
 
+  def get_all_spaces
+    @spaces.clone
+  end
+
   def clear space
     set space, nil
   end

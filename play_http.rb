@@ -19,7 +19,7 @@ class TicTacToe < Sinatra::Base
     board = get_board
     computer_play board
 
-    @board_html = HtmlPrinter.print_board(board, '/play')
+    @spaces = board.get_all_spaces
     erb :index
   end
 
@@ -35,7 +35,7 @@ class TicTacToe < Sinatra::Base
     redirect to('/')
   end
 
-  get '/play/:space' do
+  post '/play' do
     board = get_board
     space = params[:space].to_i
 

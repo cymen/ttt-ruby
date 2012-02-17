@@ -5,7 +5,7 @@ describe Board do
     @board = Board.new
   end
 
-  it "gets empty spaces" do 
+  it "gets empty spaces" do
     (1..9).each do |space|
       @board.get(space).should eq(nil)
     end
@@ -36,6 +36,14 @@ describe Board do
     @board.set(1, :x).should eq(:x)
     @board.clear(1)
     @board.get(1).should eq(nil)
+  end
+
+  it "can return a hash of the spaces which is a copy" do
+    @board = Board.new [:x]
+    spaces = @board.get_all_spaces
+    @board.get(1).should eq(:x)
+    spaces[1] = :o
+    @board.get(1).should eq(:x)
   end
 
   it "shows only some spaces empty on a partially empty board" do
