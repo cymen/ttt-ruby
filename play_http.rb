@@ -4,7 +4,6 @@ require 'json'
 require 'tic_tac_toe_helper'
 require 'computer_player'
 require 'board'
-require 'html_printer'
 require 'scorer'
 
 class TicTacToe < Sinatra::Base
