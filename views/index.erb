@@ -1,39 +1,24 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Tic-tac-toe</title>
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <div id="flash"><%= @flash %></div>
-    <h1>Tic-tac-toe</h1>
-      <form action="/play" id="board-form" method="post">
-        <div id="board">
-          <% for @index, @value in @spaces %>
-            <% if @value.nil? %>
-              <div class="space empty">
-                <input type="radio" name="space" value="<%= @index %>" class="hidden">
-              </div>
-            <% else %>
-              <div class="space <%= @value.to_s %>">
-                <%= @value.to_s %>
-              </div>
-            <% end %>
-          <% end %>
+<form action="/play" id="board-form" method="post">
+  <div id="board">
+    <% for @index, @value in @spaces %>
+      <% if @value.nil? %>
+        <div class="space empty choosable">
+          <input type="radio" name="space" value="<%= @index %>" class="hidden">
         </div>
-      </form>
-    <p class="clear">
-      <a href="/reset">reset</a>
-    </p>
-  </body>
-  <script type="text/javascript">
-    var $form = $('#board-form');
-    $('.empty').click(function (event) {
-        $(event.target)
-          .find('input')
-          .prop('checked', true);
-        $form.submit();
-    });
-  </script>
-</html>
+      <% else %>
+        <div class="space <%= @value.to_s %>">
+          <%= @value.to_s %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</form>
+<script type="text/javascript">
+  var $form = $('#board-form');
+  $('.empty').click(function (event) {
+      $(event.target)
+        .find('input')
+        .prop('checked', true);
+      $form.submit();
+  });
+</script>

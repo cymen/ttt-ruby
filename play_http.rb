@@ -17,6 +17,7 @@ class TicTacToe < Sinatra::Base
 
     board = get_board
     computer_play board
+    redirect to('/over') if Scorer.over? board
 
     @spaces = board.get_all_spaces
     erb :index
@@ -26,7 +27,7 @@ class TicTacToe < Sinatra::Base
     erb :choose_player
   end
 
-  post '/choose_player' do
+  get '/choose_player/:player' do
     player = params[:player]
 
     (player.casecmp('x') == 0) ? save_player(:x) : save_player(:o)
@@ -45,7 +46,17 @@ class TicTacToe < Sinatra::Base
     board.set space, get_player
     save_board board
 
+    redirect to('/over') if Scorer.over? board
     redirect to('/')
+  end
+
+  get '/over' do
+    board  = get_board
+    redirect to('/') if !Scorer.over? board
+
+    @spaces = board.get_all_spaces
+    @over = (Scorer.winner? board) ? "#{Scorer.winner(board).upcase} won!" : "Tie!"
+    erb :over
   end
 
   get '/reset' do
@@ -55,8 +66,10 @@ class TicTacToe < Sinatra::Base
   end
 
   def computer_play board
-    ComputerPlayer.new(opposite_of get_player).play(board) if turn(board)== opposite_of(get_player)
-    save_board board
+    if turn(board) == opposite_of(get_player)
+      ComputerPlayer.new(opposite_of get_player).play(board)
+      save_board board
+    end
   end
 
   def get_board
