@@ -45,7 +45,11 @@ class Board
   end
 
   def get_horizontal_row_index_sets
-    return Horizontal_Rows
+    index_sets = []
+    Horizontal_Rows.each do |row_index_set|
+      index_sets.push row_index_set.clone
+    end
+    index_sets
   end
 
   def count value = nil
