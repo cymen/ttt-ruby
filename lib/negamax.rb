@@ -1,5 +1,5 @@
 require 'tic_tac_toe_helper'
-require 'scorer'
+require 'board'
 
 class Negamax
   include TicTacToeHelper
@@ -32,7 +32,7 @@ class Negamax
 
   def negamax board, depth = 1, alpha = -Infinity, beta = Infinity
     return alpha if depth > (@spaces_count - 1) 
-    return sign_toggle(board) * analysis(board, depth) if Scorer.over? board
+    return sign_toggle(board) * analysis(board, depth) if board.over?
 
     player = turn board
     max = -Infinity
@@ -49,21 +49,21 @@ class Negamax
   end
 
   def analysis board, depth
-   if Scorer.winner? board
-      return (2 ** -depth) * ((initial_player_is_winner board) ? 1 : -1)
-    elsif Scorer.tie? board
+   if board.winner?
+      return (2 ** -depth) * ((initial_player_is_winner? board) ? 1 : -1)
+    elsif board.tie?
       return 0
     end
   end  
 
   def sign_toggle board
-    (initial_player_is_winner board) ? -1 : 1
+    (initial_player_is_winner? board) ? -1 : 1
   end
 
 
   # TODO:  figure out how to test -- problem: how to set @initial_player value in test?
-  def initial_player_is_winner board
-    @initial_player == Scorer.winner(board)
+  def initial_player_is_winner? board
+    @initial_player == board.winner
   end
 
   def sort_choices_optimally choices

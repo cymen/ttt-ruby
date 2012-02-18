@@ -4,7 +4,6 @@ require 'tic_tac_toe_helper'
 require 'tic_tac_toe_session_storage'
 require 'computer_player'
 require 'board'
-require 'scorer'
 
 class TicTacToeHttp < Sinatra::Base
   use Rack::Session::Pool
@@ -14,14 +13,13 @@ class TicTacToeHttp < Sinatra::Base
   set :root, File.dirname(File.dirname(__FILE__))
 
   get '/' do
-    @flash = get_flash
-
     redirect to('/choose_player') if get_player.nil?
 
     board = get_board
     computer_play board
     redirect to('/over') if Scorer.over? board
 
+    @flash = get_flash
     @spaces = board.get_all_spaces
     erb :index
   end

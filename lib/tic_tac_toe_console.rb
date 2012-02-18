@@ -1,6 +1,5 @@
 require 'board'
 require 'console_printer'
-require 'scorer'
 require 'prompter'
 require 'computer_player'
 require 'human_player'
@@ -25,7 +24,7 @@ class TicTacToeConsole
     human = HumanPlayer.new ask_human_x_or_o
     computer = ComputerPlayer.new (human.is? :x) ? :o : :x
 
-    while !Scorer.over? board
+    while !board.over?
       (human.is? turn(board)) ? human.play(board) : computer.play(board)
     end
 
@@ -41,8 +40,8 @@ class TicTacToeConsole
   def print_end board
     ConsolePrinter.print_board board
 
-    if Scorer.winner? board
-      ConsolePrinter.print_centered "#{Scorer.winner(board).upcase} won!"
+    if board.winner?
+      ConsolePrinter.print_centered "#{board.winner.upcase} won!"
     else
       ConsolePrinter.print_centered "Tie!"
     end

@@ -1,4 +1,7 @@
+require 'board_scorer'
+
 class Board
+  include BoardScorer
 
   SideLength = 3
   Horizontal_Rows = [[1,2,3], [4,5,6], [7,8,9]]
@@ -44,7 +47,7 @@ class Board
 
   def get_winning_row_index_set
     on_all_row_index_sets do |row_index|
-      return row_index if Scorer.same_and_not_nil?(get_row(row_index))
+      return row_index if same_and_not_nil?(get_row(row_index))
     end
     []
   end
