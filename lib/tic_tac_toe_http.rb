@@ -17,7 +17,7 @@ class TicTacToeHttp < Sinatra::Base
 
     board = get_board
     computer_play board
-    redirect to('/over') if Scorer.over? board
+    redirect to('/over') if board.over?
 
     @flash = get_flash
     @spaces = board.get_all_spaces
@@ -47,17 +47,17 @@ class TicTacToeHttp < Sinatra::Base
     board.set space, get_player
     save_board board
 
-    redirect to('/over') if Scorer.over? board
+    redirect to('/over') if board.over?
     redirect to('/')
   end
 
   get '/over' do
     board  = get_board
-    redirect to('/') if !Scorer.over? board
+    redirect to('/') if !board.over?
 
     @spaces = board.get_all_spaces
     @winning_indexes = board.get_winning_row_index_set
-    @over = (Scorer.winner? board) ? "#{Scorer.winner(board).upcase} won!" : "Tie!"
+    @over = (board.winner?) ? "#{board.winner.upcase} won!" : "Tie!"
     erb :over
   end
 
