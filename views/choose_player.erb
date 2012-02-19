@@ -1,3 +1,16 @@
-<div id="player_prompt">
-  <p>Would you like to be <a href="/choose_player/x">X</a> or <a href="/choose_player/o">O</a>?</p>
-</div>
+<p>
+  Would you like to be <a href="x" class="pick">X</a> or <a href="o" class="pick">O</a>?
+</p>
+
+<form action="/choose_player" id="player-form" method="post">
+  <input type="radio" name="player" value="x" class="hidden" />
+  <label><input type="radio" name="player" value="o" class="hidden" />
+</form>
+<script type="text/javascript">
+  var $form = $('#player-form');
+  $('.pick').click(function (event) {
+      event.preventDefault();
+      $('input[value=' + $(event.target).attr('href') + ']').prop('checked', true);
+      $form.submit();
+  });
+</script>

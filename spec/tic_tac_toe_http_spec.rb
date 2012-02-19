@@ -17,4 +17,11 @@ describe 'TicTacToeHttp' do
     follow_redirect!
     last_request.url.should == 'http://example.org/choose_player'
   end
+
+  it "redirects to root after x or o is chosen" do
+    post '/choose_player', params={:player => 'o'}
+    last_response.should be_redirect
+    follow_redirect!
+    last_request.url.should == 'http://example.org/'
+  end
 end
