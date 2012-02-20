@@ -76,4 +76,10 @@ describe Negamax do
   it "choose spaces 1, 3, 5, 7 and 9 as most optimal on an empty board" do
     Negamax.new.run(Board.new).should have_optimal_moves_of [1, 3, 5, 7, 9]
   end
+
+  it "verifies initial player is the winner" do
+    negamax = Negamax.new
+    negamax.initial_player = :x
+    negamax.initial_player_is_winner?(Board.new([:x,:x,:x,:o,:o])).should eq(true)
+  end
 end
