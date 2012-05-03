@@ -4,10 +4,6 @@ require 'board'
 class Negamax
   include TicTacToeHelper
 
-  # TODO:  turn into class so can inject value into intial_player
-
-  # put TicTacToe.turn into module which can include where used (mixin)
-
   attr_accessor :initial_player
   attr_reader :spaces_count
 
@@ -15,7 +11,6 @@ class Negamax
   Optimal = [1, 3, 5, 7, 9]
 
   def run board
-    # TODO:  put TicTacToe.turn into utility class or into Board perhaps
     @initial_player = turn board
     @spaces_count = board.count
 
@@ -60,8 +55,6 @@ class Negamax
     (initial_player_is_winner? board) ? -1 : 1
   end
 
-
-  # TODO:  figure out how to test -- problem: how to set @initial_player value in test?
   def initial_player_is_winner? board
     @initial_player == board.winner
   end
